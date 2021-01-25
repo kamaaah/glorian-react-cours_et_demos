@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First App</title>
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+  <script type="text/label">
+        class App extends React.Component{
+            render(){
+                return(
+            <>
+            <h1>Titre au hasard</h1>
+            <div>On est le {new Date().toLocaleDateString()}</div>
+            <div>Il est actuellement {new Date().toLocaleDateString()}</div>
+            </>
+            );
+        }
+    } setInterval(() => {
+        ReactDOM.render(
+            <App />, document.getElementById("root"));
+        }, 1000);
+  </script>
+  <script type="text/label">
+        setTimeout(() => { ReactDOM.render(
+        <h1>Ceci est mon titre</h1>
+        document.getElementById("root"));
+    }, 1000);
+  </script>
+  <script
+    src="https://unpkg.com/react@17/umd/react.development.js"
+    crossorigin
+  ></script>
+  <script
+    src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    crossorigin
+  ></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</html>
